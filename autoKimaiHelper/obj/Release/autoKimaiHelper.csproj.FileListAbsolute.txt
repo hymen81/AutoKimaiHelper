@@ -1,0 +1,9 @@
+c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Release\autoKimaiHelper.exe.config
+c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Release\autoKimaiHelper.exe
+c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Release\autoKimaiHelper.pdb
+c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.Form1.resources
+c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.Properties.Resources.resources
+c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.csproj.GenerateResource.Cache
+c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.exe
+c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.pdb
+c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.csprojResolveAssemblyReference.cache

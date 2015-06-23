@@ -1,0 +1,7 @@
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\bin\Release\UI.dll
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\bin\Release\UI.pdb
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Release\MaterialSkin.csprojResolveAssemblyReference.cache
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Release\MaterialSkin.Properties.Resources.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Release\MaterialSkin.csproj.GenerateResource.Cache
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Release\UI.dll
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Release\UI.pdb

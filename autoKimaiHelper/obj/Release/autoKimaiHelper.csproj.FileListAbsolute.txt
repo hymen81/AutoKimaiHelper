@@ -7,3 +7,13 @@ c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimai
 c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.exe
 c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.pdb
 c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.csprojResolveAssemblyReference.cache
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Release\UI.dll
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Release\UI.pdb
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.LogOut.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.ProjectTaskSelect.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.NetWorkError.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.TimeSelecter.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Release\autoKimaiHelper.exe.manifest
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Release\autoKimaiHelper.application
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.exe.manifest
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.application

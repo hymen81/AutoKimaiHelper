@@ -7,3 +7,9 @@ c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimai
 c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Debug\autoKimaiHelper.csproj.GenerateResource.Cache
 c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Debug\autoKimaiHelper.exe
 c:\users\1411070\documents\visual studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Debug\autoKimaiHelper.pdb
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Debug\autoKimaiHelper.TimeSelecter.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Debug\autoKimaiHelper.NetWorkError.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Debug\autoKimaiHelper.ProjectTaskSelect.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Debug\UI.dll
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Debug\UI.pdb
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Debug\autoKimaiHelper.LogOut.resources

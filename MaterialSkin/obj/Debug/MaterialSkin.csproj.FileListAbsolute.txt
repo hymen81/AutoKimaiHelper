@@ -1,0 +1,14 @@
+C:\Users\1411070\Downloads\MaterialSkin-master\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.dll
+C:\Users\1411070\Downloads\MaterialSkin-master\MaterialSkin-master\MaterialSkin\bin\Debug\MaterialSkin.pdb
+C:\Users\1411070\Downloads\MaterialSkin-master\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+C:\Users\1411070\Downloads\MaterialSkin-master\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+C:\Users\1411070\Downloads\MaterialSkin-master\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+C:\Users\1411070\Downloads\MaterialSkin-master\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.dll
+C:\Users\1411070\Downloads\MaterialSkin-master\MaterialSkin-master\MaterialSkin\obj\Debug\MaterialSkin.pdb
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\bin\Debug\UI.dll
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\bin\Debug\UI.pdb
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Debug\UI.dll
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\MaterialSkin\obj\Debug\UI.pdb

@@ -360,7 +360,6 @@
             this.tabPage3.Controls.Add(this.materialTabSelector2);
             this.tabPage3.Controls.Add(this.materialTabControl2);
             this.tabPage3.Controls.Add(this.postDataButton);
-            this.tabPage3.Controls.Add(this.getProjectList);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(854, 405);
@@ -387,7 +386,7 @@
             this.materialTabControl2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl2.Name = "materialTabControl2";
             this.materialTabControl2.SelectedIndex = 0;
-            this.materialTabControl2.Size = new System.Drawing.Size(693, 382);
+            this.materialTabControl2.Size = new System.Drawing.Size(777, 382);
             this.materialTabControl2.TabIndex = 59;
             // 
             // singleTab
@@ -410,7 +409,7 @@
             this.singleTab.Location = new System.Drawing.Point(4, 25);
             this.singleTab.Name = "singleTab";
             this.singleTab.Padding = new System.Windows.Forms.Padding(3);
-            this.singleTab.Size = new System.Drawing.Size(685, 353);
+            this.singleTab.Size = new System.Drawing.Size(769, 353);
             this.singleTab.TabIndex = 0;
             this.singleTab.Text = "單天腳本";
             // 
@@ -698,14 +697,14 @@
             this.weekTab.Location = new System.Drawing.Point(4, 25);
             this.weekTab.Name = "weekTab";
             this.weekTab.Padding = new System.Windows.Forms.Padding(3);
-            this.weekTab.Size = new System.Drawing.Size(685, 353);
+            this.weekTab.Size = new System.Drawing.Size(769, 353);
             this.weekTab.TabIndex = 1;
             this.weekTab.Text = "一週腳本";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::autoKimaiHelper.Properties.Resources.minus;
-            this.pictureBox3.Location = new System.Drawing.Point(142, 110);
+            this.pictureBox3.Location = new System.Drawing.Point(322, 110);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1540,6 +1539,7 @@
             this.yearsWeek.TabStop = false;
             this.yearsWeek.Text = "2014";
             this.yearsWeek.UseSystemPasswordChar = false;
+            this.yearsWeek.Click += new System.EventHandler(this.yearsWeek_Click);
             // 
             // materialLabel8
             // 
@@ -1571,6 +1571,7 @@
             this.mouthWeek.TabStop = false;
             this.mouthWeek.Text = "12";
             this.mouthWeek.UseSystemPasswordChar = false;
+            this.mouthWeek.Click += new System.EventHandler(this.mouthWeek_Click);
             // 
             // DayWeek
             // 
@@ -1589,6 +1590,7 @@
             this.DayWeek.TabStop = false;
             this.DayWeek.Text = "01";
             this.DayWeek.UseSystemPasswordChar = false;
+            this.DayWeek.Click += new System.EventHandler(this.DayWeek_Click);
             // 
             // w5
             // 
@@ -1658,7 +1660,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::autoKimaiHelper.Properties.Resources.plus;
-            this.pictureBox2.Location = new System.Drawing.Point(172, 110);
+            this.pictureBox2.Location = new System.Drawing.Point(352, 110);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1669,11 +1671,11 @@
             // postDataButton
             // 
             this.postDataButton.Depth = 0;
-            this.postDataButton.Location = new System.Drawing.Point(695, 140);
+            this.postDataButton.Location = new System.Drawing.Point(779, 140);
             this.postDataButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.postDataButton.Name = "postDataButton";
             this.postDataButton.Primary = true;
-            this.postDataButton.Size = new System.Drawing.Size(156, 78);
+            this.postDataButton.Size = new System.Drawing.Size(72, 165);
             this.postDataButton.TabIndex = 56;
             this.postDataButton.Text = "start";
             this.postDataButton.UseVisualStyleBackColor = true;
@@ -1682,11 +1684,11 @@
             // getProjectList
             // 
             this.getProjectList.Depth = 0;
-            this.getProjectList.Location = new System.Drawing.Point(695, 12);
+            this.getProjectList.Location = new System.Drawing.Point(868, 152);
             this.getProjectList.MouseState = MaterialSkin.MouseState.HOVER;
             this.getProjectList.Name = "getProjectList";
             this.getProjectList.Primary = true;
-            this.getProjectList.Size = new System.Drawing.Size(156, 78);
+            this.getProjectList.Size = new System.Drawing.Size(69, 78);
             this.getProjectList.TabIndex = 47;
             this.getProjectList.Text = "2.Get Project and Task List";
             this.getProjectList.UseVisualStyleBackColor = true;
@@ -1708,7 +1710,7 @@
             // timeSheetMaterialRaisedButton
             // 
             this.timeSheetMaterialRaisedButton.Depth = 0;
-            this.timeSheetMaterialRaisedButton.Location = new System.Drawing.Point(463, 131);
+            this.timeSheetMaterialRaisedButton.Location = new System.Drawing.Point(684, 135);
             this.timeSheetMaterialRaisedButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.timeSheetMaterialRaisedButton.Name = "timeSheetMaterialRaisedButton";
             this.timeSheetMaterialRaisedButton.Primary = true;
@@ -1721,7 +1723,7 @@
             // deleteMaterialRaisedButton
             // 
             this.deleteMaterialRaisedButton.Depth = 0;
-            this.deleteMaterialRaisedButton.Location = new System.Drawing.Point(463, 36);
+            this.deleteMaterialRaisedButton.Location = new System.Drawing.Point(684, 40);
             this.deleteMaterialRaisedButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.deleteMaterialRaisedButton.Name = "deleteMaterialRaisedButton";
             this.deleteMaterialRaisedButton.Primary = true;
@@ -1742,10 +1744,35 @@
             this.listView1.LabelEdit = true;
             this.listView1.Location = new System.Drawing.Point(7, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(432, 309);
+            this.listView1.Size = new System.Drawing.Size(671, 309);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "打卡時間";
+            this.columnHeader2.Width = 142;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "打卡時數";
+            this.columnHeader3.Width = 134;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Project";
+            this.columnHeader4.Width = 155;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Task";
+            this.columnHeader5.Width = 158;
             // 
             // label8
             // 
@@ -1783,7 +1810,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(960, 520);
+            this.ClientSize = new System.Drawing.Size(973, 520);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.materialTabSelector1);
@@ -1797,6 +1824,7 @@
             this.Controls.Add(this.evtID);
             this.Controls.Add(this.pctID);
             this.Controls.Add(this.evt_ID);
+            this.Controls.Add(this.getProjectList);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";

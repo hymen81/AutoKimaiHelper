@@ -11,6 +11,7 @@
     <AssemblyName>autoKimaiHelper</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>D:\dasdasd\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -21,9 +22,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -73,6 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\AutoKimaiCore.cs" />
+    <Compile Include="Model\CookieData.cs" />
+    <Compile Include="Model\PostDoWork.cs" />
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +86,12 @@
     </Compile>
     <Compile Include="UI\LogOut.Designer.cs">
       <DependentUpon>LogOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DaySelecter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DaySelecter.Designer.cs">
+      <DependentUpon>DaySelecter.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ProjectTaskSelect.cs">
       <SubType>Form</SubType>
@@ -101,6 +109,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Model\ProjectData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\MouthSelecter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MouthSelecter.Designer.cs">
+      <DependentUpon>MouthSelecter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\YearSelecter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\YearSelecter.Designer.cs">
+      <DependentUpon>YearSelecter.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\TimeSelecter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\LogOut.resx">
       <DependentUpon>LogOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DaySelecter.resx">
+      <DependentUpon>DaySelecter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ProjectTaskSelect.resx">
       <DependentUpon>ProjectTaskSelect.cs</DependentUpon>
@@ -130,6 +153,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\MouthSelecter.resx">
+      <DependentUpon>MouthSelecter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\YearSelecter.resx">
+      <DependentUpon>YearSelecter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\TimeSelecter.resx">
       <DependentUpon>TimeSelecter.cs</DependentUpon>
     </EmbeddedResource>

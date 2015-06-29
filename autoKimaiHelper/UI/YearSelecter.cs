@@ -12,11 +12,11 @@ using MaterialSkin.Controls;
 
 namespace autoKimaiHelper
 {
-    public partial class TimeSelecter : MaterialForm
+    public partial class YearSelecter : MaterialForm
     {
         List<MaterialRaisedButton> buttons = new List<MaterialRaisedButton>();
         TextBox textBox;
-        public TimeSelecter(TextBox tb)
+        public YearSelecter(TextBox tb)
         {
             InitializeComponent();
             textBox = tb;
@@ -45,7 +45,7 @@ namespace autoKimaiHelper
             buttons.Add(materialRaisedButton23);
             buttons.Add(materialRaisedButton24);
 
-            UInt16 time = 1;
+            UInt16 time = 2014;
             foreach (MaterialRaisedButton bt in buttons)
             {    
                 bt.Click += new System.EventHandler(this.bt_Click);
@@ -58,7 +58,9 @@ namespace autoKimaiHelper
             Button wt = (Button)sender;
             textBox.Text = wt.Text;
             this.Close();
+            
             //pctID.Text = wt.Tag.ToString();
+
         }
        
     }

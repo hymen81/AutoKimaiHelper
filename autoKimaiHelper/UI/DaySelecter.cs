@@ -12,11 +12,11 @@ using MaterialSkin.Controls;
 
 namespace autoKimaiHelper
 {
-    public partial class TimeSelecter : MaterialForm
+    public partial class DaySelecter : MaterialForm
     {
         List<MaterialRaisedButton> buttons = new List<MaterialRaisedButton>();
         TextBox textBox;
-        public TimeSelecter(TextBox tb)
+        public DaySelecter(TextBox tb,int selectYear,int selectMouth)
         {
             InitializeComponent();
             textBox = tb;
@@ -44,13 +44,26 @@ namespace autoKimaiHelper
             buttons.Add(materialRaisedButton22);
             buttons.Add(materialRaisedButton23);
             buttons.Add(materialRaisedButton24);
+            buttons.Add(materialRaisedButton25);
+            buttons.Add(materialRaisedButton26);
+            buttons.Add(materialRaisedButton27);
+            buttons.Add(materialRaisedButton28);
+            buttons.Add(materialRaisedButton29);
+            buttons.Add(materialRaisedButton30);
+            buttons.Add(materialRaisedButton31);
 
-            UInt16 time = 1;
+            int daysInMouth = DateTime.DaysInMonth(selectYear, selectMouth);
+             
+            UInt16 mouth = 1;
             foreach (MaterialRaisedButton bt in buttons)
-            {    
+            {              
+                if (daysInMouth == 0)
+                    break;
                 bt.Click += new System.EventHandler(this.bt_Click);
-                bt.Text = time.ToString();
-                time++;
+                bt.Text = mouth.ToString().PadLeft(2, '0'); 
+                bt.Visible = true;
+                mouth++;
+                daysInMouth--;
             }
         }
         private void bt_Click(object sender, EventArgs e)
@@ -58,7 +71,9 @@ namespace autoKimaiHelper
             Button wt = (Button)sender;
             textBox.Text = wt.Text;
             this.Close();
+            
             //pctID.Text = wt.Tag.ToString();
+
         }
        
     }

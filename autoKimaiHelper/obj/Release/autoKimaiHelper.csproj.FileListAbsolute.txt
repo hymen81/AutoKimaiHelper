@@ -17,3 +17,6 @@ C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimai
 C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\bin\Release\autoKimaiHelper.application
 C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.exe.manifest
 C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.application
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.YearSelecter.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.MouthSelecter.resources
+C:\Users\1411070\Documents\Visual Studio 2013\Projects\autoKimaiHelper\autoKimaiHelper\obj\Release\autoKimaiHelper.DaySelecter.resources

@@ -1,6 +1,6 @@
 ﻿namespace autoKimaiHelper
 {
-    partial class TimeSelecter
+    partial class YearSelecter
     {
         /// <summary>
         /// Required designer variable.
@@ -129,7 +129,7 @@
             // materialRaisedButton7
             // 
             this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(94, 77);
+            this.materialRaisedButton7.Location = new System.Drawing.Point(116, 77);
             this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton7.Name = "materialRaisedButton7";
             this.materialRaisedButton7.Primary = true;
@@ -141,7 +141,7 @@
             // materialRaisedButton8
             // 
             this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(94, 106);
+            this.materialRaisedButton8.Location = new System.Drawing.Point(116, 106);
             this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton8.Name = "materialRaisedButton8";
             this.materialRaisedButton8.Primary = true;
@@ -153,7 +153,7 @@
             // materialRaisedButton9
             // 
             this.materialRaisedButton9.Depth = 0;
-            this.materialRaisedButton9.Location = new System.Drawing.Point(94, 135);
+            this.materialRaisedButton9.Location = new System.Drawing.Point(116, 135);
             this.materialRaisedButton9.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton9.Name = "materialRaisedButton9";
             this.materialRaisedButton9.Primary = true;
@@ -165,7 +165,7 @@
             // materialRaisedButton10
             // 
             this.materialRaisedButton10.Depth = 0;
-            this.materialRaisedButton10.Location = new System.Drawing.Point(94, 164);
+            this.materialRaisedButton10.Location = new System.Drawing.Point(116, 164);
             this.materialRaisedButton10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton10.Name = "materialRaisedButton10";
             this.materialRaisedButton10.Primary = true;
@@ -177,7 +177,7 @@
             // materialRaisedButton11
             // 
             this.materialRaisedButton11.Depth = 0;
-            this.materialRaisedButton11.Location = new System.Drawing.Point(94, 193);
+            this.materialRaisedButton11.Location = new System.Drawing.Point(116, 193);
             this.materialRaisedButton11.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton11.Name = "materialRaisedButton11";
             this.materialRaisedButton11.Primary = true;
@@ -189,7 +189,7 @@
             // materialRaisedButton12
             // 
             this.materialRaisedButton12.Depth = 0;
-            this.materialRaisedButton12.Location = new System.Drawing.Point(94, 222);
+            this.materialRaisedButton12.Location = new System.Drawing.Point(116, 222);
             this.materialRaisedButton12.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton12.Name = "materialRaisedButton12";
             this.materialRaisedButton12.Primary = true;
@@ -201,7 +201,7 @@
             // materialRaisedButton13
             // 
             this.materialRaisedButton13.Depth = 0;
-            this.materialRaisedButton13.Location = new System.Drawing.Point(175, 77);
+            this.materialRaisedButton13.Location = new System.Drawing.Point(218, 77);
             this.materialRaisedButton13.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton13.Name = "materialRaisedButton13";
             this.materialRaisedButton13.Primary = true;
@@ -213,7 +213,7 @@
             // materialRaisedButton14
             // 
             this.materialRaisedButton14.Depth = 0;
-            this.materialRaisedButton14.Location = new System.Drawing.Point(175, 106);
+            this.materialRaisedButton14.Location = new System.Drawing.Point(218, 106);
             this.materialRaisedButton14.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton14.Name = "materialRaisedButton14";
             this.materialRaisedButton14.Primary = true;
@@ -225,7 +225,7 @@
             // materialRaisedButton15
             // 
             this.materialRaisedButton15.Depth = 0;
-            this.materialRaisedButton15.Location = new System.Drawing.Point(175, 135);
+            this.materialRaisedButton15.Location = new System.Drawing.Point(218, 135);
             this.materialRaisedButton15.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton15.Name = "materialRaisedButton15";
             this.materialRaisedButton15.Primary = true;
@@ -237,7 +237,7 @@
             // materialRaisedButton16
             // 
             this.materialRaisedButton16.Depth = 0;
-            this.materialRaisedButton16.Location = new System.Drawing.Point(175, 164);
+            this.materialRaisedButton16.Location = new System.Drawing.Point(218, 164);
             this.materialRaisedButton16.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton16.Name = "materialRaisedButton16";
             this.materialRaisedButton16.Primary = true;
@@ -249,7 +249,7 @@
             // materialRaisedButton17
             // 
             this.materialRaisedButton17.Depth = 0;
-            this.materialRaisedButton17.Location = new System.Drawing.Point(175, 193);
+            this.materialRaisedButton17.Location = new System.Drawing.Point(218, 193);
             this.materialRaisedButton17.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton17.Name = "materialRaisedButton17";
             this.materialRaisedButton17.Primary = true;
@@ -261,7 +261,7 @@
             // materialRaisedButton18
             // 
             this.materialRaisedButton18.Depth = 0;
-            this.materialRaisedButton18.Location = new System.Drawing.Point(175, 222);
+            this.materialRaisedButton18.Location = new System.Drawing.Point(218, 222);
             this.materialRaisedButton18.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton18.Name = "materialRaisedButton18";
             this.materialRaisedButton18.Primary = true;
@@ -273,7 +273,7 @@
             // materialRaisedButton19
             // 
             this.materialRaisedButton19.Depth = 0;
-            this.materialRaisedButton19.Location = new System.Drawing.Point(256, 77);
+            this.materialRaisedButton19.Location = new System.Drawing.Point(317, 77);
             this.materialRaisedButton19.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton19.Name = "materialRaisedButton19";
             this.materialRaisedButton19.Primary = true;
@@ -285,7 +285,7 @@
             // materialRaisedButton20
             // 
             this.materialRaisedButton20.Depth = 0;
-            this.materialRaisedButton20.Location = new System.Drawing.Point(256, 106);
+            this.materialRaisedButton20.Location = new System.Drawing.Point(317, 106);
             this.materialRaisedButton20.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton20.Name = "materialRaisedButton20";
             this.materialRaisedButton20.Primary = true;
@@ -297,7 +297,7 @@
             // materialRaisedButton21
             // 
             this.materialRaisedButton21.Depth = 0;
-            this.materialRaisedButton21.Location = new System.Drawing.Point(256, 135);
+            this.materialRaisedButton21.Location = new System.Drawing.Point(317, 135);
             this.materialRaisedButton21.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton21.Name = "materialRaisedButton21";
             this.materialRaisedButton21.Primary = true;
@@ -309,7 +309,7 @@
             // materialRaisedButton22
             // 
             this.materialRaisedButton22.Depth = 0;
-            this.materialRaisedButton22.Location = new System.Drawing.Point(256, 164);
+            this.materialRaisedButton22.Location = new System.Drawing.Point(317, 164);
             this.materialRaisedButton22.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton22.Name = "materialRaisedButton22";
             this.materialRaisedButton22.Primary = true;
@@ -321,7 +321,7 @@
             // materialRaisedButton23
             // 
             this.materialRaisedButton23.Depth = 0;
-            this.materialRaisedButton23.Location = new System.Drawing.Point(256, 193);
+            this.materialRaisedButton23.Location = new System.Drawing.Point(317, 193);
             this.materialRaisedButton23.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton23.Name = "materialRaisedButton23";
             this.materialRaisedButton23.Primary = true;
@@ -333,7 +333,7 @@
             // materialRaisedButton24
             // 
             this.materialRaisedButton24.Depth = 0;
-            this.materialRaisedButton24.Location = new System.Drawing.Point(256, 222);
+            this.materialRaisedButton24.Location = new System.Drawing.Point(317, 222);
             this.materialRaisedButton24.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton24.Name = "materialRaisedButton24";
             this.materialRaisedButton24.Primary = true;
@@ -346,7 +346,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 261);
+            this.ClientSize = new System.Drawing.Size(420, 307);
             this.Controls.Add(this.materialRaisedButton24);
             this.Controls.Add(this.materialRaisedButton23);
             this.Controls.Add(this.materialRaisedButton22);
@@ -372,7 +372,7 @@
             this.Controls.Add(this.materialRaisedButton2);
             this.Controls.Add(this.materialRaisedButton1);
             this.Name = "TimeSelecter";
-            this.Text = "時數選擇";
+            this.Text = "年分選擇";
             this.ResumeLayout(false);
 
         }

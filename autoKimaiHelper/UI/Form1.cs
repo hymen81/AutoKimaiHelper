@@ -16,6 +16,7 @@ using System.IO;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Threading;
+using System.Diagnostics;
 
 
 namespace autoKimaiHelper
@@ -27,21 +28,20 @@ namespace autoKimaiHelper
         private readonly MaterialSkinManager materialSkinManager;
         AutoKimaiCore akc;
         int zefId = 0;
+        const int NOTFOUND = -1;
         //public string GOBELTIME = "";
         private TimeSelecter timeSelectStack = null;
+        private YearSelecter yearSelect = null;
+        private MouthSelecter mouthSelect = null;
+        private DaySelecter daySelect = null;
         
 
         List<ProjectData> projectData = new List<ProjectData>();
         List<ProjectData> pctSearchedList = new List<ProjectData>();
         List<string> evtSearchedList = new List<string>();
-
-        WeekDataList wdList = new WeekDataList();
-
-        
-
+        WeekDataList wdList = new WeekDataList();   
         private List<MaterialSingleLineTextField> weekDayTimes = new List<MaterialSingleLineTextField>();
         private List<MaterialSingleLineTextField> weekDayProjects = new List<MaterialSingleLineTextField>();
-
         static private LogOut lo = null;
 
         public Form1()
@@ -49,7 +49,6 @@ namespace autoKimaiHelper
             InitializeComponent();
             postDataButton.Enabled = false;
             manyDays.Enabled = true;
-
             years.Text = (DateTime.Now.ToString("yyyy"));
             mouth.Text = (DateTime.Now.ToString("MM"));
             yearsWeek.Text = (DateTime.Now.ToString("yyyy"));
@@ -125,13 +124,15 @@ namespace autoKimaiHelper
             NetWorkCheck nwc = new NetWorkCheck();
             materialLabel2.Text = nwc.dnsName;
 
-            if (materialLabel2.Text.IndexOf("acer") == -1)
+            if (materialLabel2.Text.IndexOf("acer") == NOTFOUND)
             {
                 NetWorkError nwe = new NetWorkError();
                 nwe.Show();
             }
 
             lo = new LogOut(this);
+
+           
 
             //checkBox1.Enabled = false;
                       
@@ -334,19 +335,16 @@ namespace autoKimaiHelper
         private void logInMButton_Click(object sender, EventArgs e)
         {
             List<string> outPut = new List<string>();
-          //  Thread workerThread = new Thread(akc.LogIn);
-            akc.LogIn(name.Text, pass.Text, ref outPut);
-            
+          //Thread workerThread = new Thread(akc.LogIn);
+            akc.LogIn(name.Text, pass.Text, ref outPut);        
             foreach (string s in outPut)
             {
                 outPutLine.Items.Add(s);
             }
-
             if (outPutLine.Items.Count > 0)
             {
                 outPutLine.SelectedIndex = outPutLine.Items.Count - 1;
             }
-
           //  ListViewItem a = new ListViewItem();
           //  a.SubItems.Add("GG");
            // a.Text = "dasd";
@@ -360,12 +358,10 @@ namespace autoKimaiHelper
             string result = akc.GetDataList();
             outPutLine.Items.Add(result);
             Clipboard.SetData(System.Windows.Forms.DataFormats.Text, result.ToString());
-
             // HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
             // doc.LoadHtml(result);
           //  string p = "option";
             // HtmlAgilityPack.HtmlNodeCollection nodes = doc.DocumentNode.SelectNodes("/html/body/div[@id='floater_innerwrap']/div[@id='floater_content']/div[@id='floater_dimensions']");
-
             bool changeFlag = false;
 
             int index = 0;
@@ -374,7 +370,7 @@ namespace autoKimaiHelper
             {
                 index = result.IndexOf("<option label=", index);
                 indexEnd = result.IndexOf("</option>", indexEnd);
-                if (index != -1)
+                if (index != NOTFOUND)
                 {
                     string noOp = result.Substring(index + 15, indexEnd - index - 15);
 
@@ -396,7 +392,7 @@ namespace autoKimaiHelper
                     index++;
                     indexEnd++;
                 }
-            } while (index != -1);
+            } while (index != NOTFOUND);
 
             outPutLine.Items.Add(result);
             if (outPutLine.Items.Count > 0)
@@ -408,8 +404,7 @@ namespace autoKimaiHelper
         private void analyticsPage() 
         {
             //Thread.Sleep(5000);
-            //materialTabControl1.SelectedIndex = 2;
-            
+            //materialTabControl1.SelectedIndex = 2;            
         }
 
         private void materialTabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -423,8 +418,7 @@ namespace autoKimaiHelper
                     
                     break;
                   //  PictureBox p = new PictureBox();
-                    
-
+                   
                         /*  this.pictureBox1.Image = global::autoKimaiHelper.Properties.Resources.loading_gallery;
             this.pictureBox1.Location = new System.Drawing.Point(110, 21);
             this.pictureBox1.Name = "pictureBox1";
@@ -434,8 +428,6 @@ namespace autoKimaiHelper
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Visible = false;*/
             }
-
-
             if (materialTabControl1.SelectedIndex == 1)
             {
                 pictureBox1.Visible = true;
@@ -465,7 +457,7 @@ namespace autoKimaiHelper
             {
                 index = result.IndexOf("<option label=", index);
                 indexEnd = result.IndexOf("</option>", indexEnd);
-                if (index != -1)
+                if (index != NOTFOUND)
                 {
                     string noOp = result.Substring(index + 15, indexEnd - index - 15);
 
@@ -493,10 +485,7 @@ namespace autoKimaiHelper
                     index++;
                     indexEnd++;
                 }
-            } while (index != -1);
-
-
-
+            } while (index != NOTFOUND);
 
             outPutLine.Items.Add(result);
             if (outPutLine.Items.Count > 0)
@@ -512,7 +501,7 @@ namespace autoKimaiHelper
 
         private void pctList_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (pctList.SelectedIndex == -1)
+            if (pctList.SelectedIndex == NOTFOUND)
                 return;
             //string pctListString = pctList.Items[pctList.SelectedIndex].ToString();
             //pctID.Text = pctListString.Substring(pctListString.IndexOf('=') + 1, pctListString.Length - pctListString.IndexOf('=') - 1);
@@ -526,7 +515,7 @@ namespace autoKimaiHelper
             int indexEnd = 0;
             do
             {
-                if (indexEnd == -1)
+                if (indexEnd == NOTFOUND)
                     break;
                 try
                 {
@@ -536,7 +525,7 @@ namespace autoKimaiHelper
                 catch { break; }
                 //if (index == -1 || indexEnd == -1)
                 //  break;
-                if (index != -1 && indexEnd != -1)
+                if (index != NOTFOUND && indexEnd != NOTFOUND)
                 {
                     string evtId = evtData.Substring(index, indexEnd - index);
                     evtId = evtId.Replace("\">", "=");
@@ -545,7 +534,7 @@ namespace autoKimaiHelper
                     indexEnd++;
                     index++;
                 }
-            } while (index != -1);
+            } while (index != NOTFOUND);
         }
 
         private void postDataButton_Click_1(object sender, EventArgs e)
@@ -581,7 +570,7 @@ namespace autoKimaiHelper
             pctSearchedList.Clear();
             foreach (ProjectData pd in projectData)
             {
-                if (pd.VALUE.ToUpper().IndexOf(pctSearchText.Text.ToUpper()) != -1)
+                if (pd.VALUE.ToUpper().IndexOf(pctSearchText.Text.ToUpper()) != NOTFOUND)
                 {
                     pctSearchedList.Add(pd);
                     pctList.Items.Add(pd.VALUE);
@@ -589,16 +578,30 @@ namespace autoKimaiHelper
             }
         }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           // zefId = int.Parse();
+            Debug.WriteLine(listView1.SelectedItems[0].Text);
+        }
+
         private void deleteMaterialRaisedButton_Click(object sender, EventArgs e)
         {
             outPutLine.Items.Clear();
-            this.Text = listView1.SelectedItems[0].Text;
-            //string result = akc.deleteDay(zefId);
-            //outPutLine.Items.Add(result);
+            //this.Text = listView1.SelectedItems[0].Text;
+            Debug.WriteLine(zefId);
+            int selectItemsCount = listView1.SelectedItems.Count;
+            //int firstIndex = listView1.SelectedItems[0].Index;
+            for (int i = 0; i < selectItemsCount; i++)
+            {
+                string result = akc.deleteDay(int.Parse(listView1.SelectedItems[0].Text));
+                listView1.Items.Remove(listView1.SelectedItems[0]);
+                outPutLine.Items.Add(result);
+            }
         }
 
         private void timeSheetMaterialRaisedButton_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
             outPutLine.Items.Clear();
             string result = akc.GetTimeSheetList();
             outPutLine.Items.Add(result);
@@ -608,12 +611,12 @@ namespace autoKimaiHelper
             {
                 index = result.IndexOf("<tr id=", index); // <tr id="zefEntry
                 indexEnd = result.IndexOf("</tr>", indexEnd);
-                if (index != -1)
+                if (index != NOTFOUND)
                 {
                     string zef = result.Substring(index, indexEnd - index);
                     index++;
                     indexEnd++;
-                    if (zef.IndexOf("zef", 0) == -1)
+                    if (zef.IndexOf("zef", 0) == NOTFOUND)
                         continue;
                     // int dateIndex =  zef.IndexOf("<td class=\"date",0);
 
@@ -659,9 +662,7 @@ namespace autoKimaiHelper
                     //index = indexEnd;
 
                 }
-
-
-            } while (index != -1);
+            } while (index != NOTFOUND);
         }
 
         private void weekTme_Click(object sender, EventArgs e)
@@ -676,13 +677,12 @@ namespace autoKimaiHelper
                 timeSelectStack = new TimeSelecter(wt);
             }
             timeSelectStack.Location = new Point(wt.Location.X, wt.Location.Y);
-            timeSelectStack.Show();      
-            
+            timeSelectStack.Show();           
         }
 
         private void evtList_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (evtList.SelectedIndex == -1)
+            if (evtList.SelectedIndex == NOTFOUND)
                 return;
             string evtListString = evtList.Items[evtList.SelectedIndex].ToString();
             // evtID.Text = evtListString.Substring(evtListString.IndexOf('=') + 1, evtListString.Length - evtListString.IndexOf('=') - 1);
@@ -697,7 +697,7 @@ namespace autoKimaiHelper
             //evtSearchedList.Clear();
             foreach (string evt in evtSearchedList)
             {
-                if (evt.ToUpper().IndexOf(evtSearchText.Text.ToUpper()) != -1)
+                if (evt.ToUpper().IndexOf(evtSearchText.Text.ToUpper()) != NOTFOUND)
                 {
                     //pctSearchedList.Add(pd);
                     evtList.Items.Add(evt);
@@ -708,7 +708,7 @@ namespace autoKimaiHelper
 
         private void weekProject_Click(object sender, EventArgs e)
         {
-            // ProjectTaskSelect.getInstance().setData(projectData, this);
+            //ProjectTaskSelect.getInstance().setData(projectData, this);
             TextBox tb = (TextBox)sender;         
             ProjectTaskSelect pts = new ProjectTaskSelect(projectData, this, tb);
             pts.Show();
@@ -723,8 +723,6 @@ namespace autoKimaiHelper
             {
                 pictureBox2.Location = new Point(now.X, now.Y + 80);
                 pictureBox3.Location = new Point(now.X - 40, now.Y + 80);
-
-
                 startPos += 5;
                 endPos += 5;
                 for (int i = startPos; i < endPos; i++)
@@ -742,8 +740,6 @@ namespace autoKimaiHelper
             {
                 pictureBox3.Location = new Point(now.X, now.Y - 80);
                 pictureBox2.Location = new Point(now.X + 40, now.Y - 80);
-
-
                 for (int i = startPos; i < endPos; i++)
                 {
                     weekDayTimes[i].Visible = false;
@@ -756,7 +752,7 @@ namespace autoKimaiHelper
 
         private void pctList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (pctList.SelectedIndex == -1)
+            if (pctList.SelectedIndex == NOTFOUND)
                 return;
             //string pctListString = pctList.Items[pctList.SelectedIndex].ToString();
             //pctID.Text = pctListString.Substring(pctListString.IndexOf('=') + 1, pctListString.Length - pctListString.IndexOf('=') - 1);
@@ -770,7 +766,7 @@ namespace autoKimaiHelper
             int indexEnd = 0;
             do
             {
-                if (indexEnd == -1)
+                if (indexEnd == NOTFOUND)
                     break;
                 try
                 {
@@ -780,7 +776,7 @@ namespace autoKimaiHelper
                 catch { break; }
                 //if (index == -1 || indexEnd == -1)
                 //  break;
-                if (index != -1 && indexEnd != -1)
+                if (index != NOTFOUND && indexEnd != NOTFOUND)
                 {
                     string evtId = evtData.Substring(index, indexEnd - index);
                     evtId = evtId.Replace("\">", "=");
@@ -789,12 +785,12 @@ namespace autoKimaiHelper
                     indexEnd++;
                     index++;
                 }
-            } while (index != -1);
+            } while (index != NOTFOUND);
         }
 
         private void evtList_SelectedIndexChanged_2(object sender, EventArgs e)
         {
-            if (evtList.SelectedIndex == -1)
+            if (evtList.SelectedIndex == NOTFOUND)
                 return;
             string evtListString = evtList.Items[evtList.SelectedIndex].ToString();
             // evtID.Text = evtListString.Substring(evtListString.IndexOf('=') + 1, evtListString.Length - evtListString.IndexOf('=') - 1);
@@ -809,7 +805,7 @@ namespace autoKimaiHelper
             //evtSearchedList.Clear();
             foreach (string evt in evtSearchedList)
             {
-                if (evt.ToUpper().IndexOf(evtSearchText.Text.ToUpper()) != -1)
+                if (evt.ToUpper().IndexOf(evtSearchText.Text.ToUpper()) != NOTFOUND)
                 {
                     //pctSearchedList.Add(pd);
                     evtList.Items.Add(evt);
@@ -824,13 +820,63 @@ namespace autoKimaiHelper
             pctSearchedList.Clear();
             foreach (ProjectData pd in projectData)
             {
-                if (pd.VALUE.ToUpper().IndexOf(pctSearchText.Text.ToUpper()) != -1)
+                if (pd.VALUE.ToUpper().IndexOf(pctSearchText.Text.ToUpper()) != NOTFOUND)
                 {
                     pctSearchedList.Add(pd);
                     pctList.Items.Add(pd.VALUE);
                 }
             }
         }
+
+        private void yearsWeek_Click(object sender, EventArgs e)
+        {
+            TextBox wt = (TextBox)sender;
+            if (yearSelect == null)
+            {
+                yearSelect = new YearSelecter(wt);
+            }
+            else
+            {
+                yearSelect.Dispose();
+                yearSelect = new YearSelecter(wt);
+            }
+            yearSelect.Location = new Point(wt.Location.X, wt.Location.Y);
+            yearSelect.Show();     
+        }
+
+        private void mouthWeek_Click(object sender, EventArgs e)
+        {
+            TextBox wt = (TextBox)sender;
+            if (mouthSelect == null)
+            {
+                mouthSelect = new MouthSelecter(wt);
+            }
+            else
+            {
+                mouthSelect.Dispose();
+                mouthSelect = new MouthSelecter(wt);
+            }
+            mouthSelect.Location = new Point(wt.Location.X, wt.Location.Y);
+            mouthSelect.Show();  
+        }
+
+        private void DayWeek_Click(object sender, EventArgs e)
+        {
+            TextBox wt = (TextBox)sender;
+            if (daySelect == null)
+            {
+                daySelect = new DaySelecter(wt, Int16.Parse(yearsWeek.Text), Int16.Parse(mouthWeek.Text));
+            }
+            else
+            {
+                daySelect.Dispose();
+                daySelect = new DaySelecter(wt, Int16.Parse(yearsWeek.Text), Int16.Parse(mouthWeek.Text));
+            }
+            daySelect.Location = new Point(wt.Location.X, wt.Location.Y);
+            daySelect.Show();
+        }
+
+  
 
     
 

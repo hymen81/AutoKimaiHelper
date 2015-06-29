@@ -12,11 +12,11 @@ using MaterialSkin.Controls;
 
 namespace autoKimaiHelper
 {
-    public partial class TimeSelecter : MaterialForm
+    public partial class MouthSelecter : MaterialForm
     {
         List<MaterialRaisedButton> buttons = new List<MaterialRaisedButton>();
         TextBox textBox;
-        public TimeSelecter(TextBox tb)
+        public MouthSelecter(TextBox tb)
         {
             InitializeComponent();
             textBox = tb;
@@ -31,26 +31,13 @@ namespace autoKimaiHelper
             buttons.Add(materialRaisedButton9);
             buttons.Add(materialRaisedButton10);
             buttons.Add(materialRaisedButton11);
-            buttons.Add(materialRaisedButton12);
-            buttons.Add(materialRaisedButton13);
-            buttons.Add(materialRaisedButton14);
-            buttons.Add(materialRaisedButton15);
-            buttons.Add(materialRaisedButton16);
-            buttons.Add(materialRaisedButton17);
-            buttons.Add(materialRaisedButton18);
-            buttons.Add(materialRaisedButton19);
-            buttons.Add(materialRaisedButton20);
-            buttons.Add(materialRaisedButton21);
-            buttons.Add(materialRaisedButton22);
-            buttons.Add(materialRaisedButton23);
-            buttons.Add(materialRaisedButton24);
-
-            UInt16 time = 1;
+            buttons.Add(materialRaisedButton12);  
+            UInt16 mouth = 1;
             foreach (MaterialRaisedButton bt in buttons)
             {    
                 bt.Click += new System.EventHandler(this.bt_Click);
-                bt.Text = time.ToString();
-                time++;
+                bt.Text = mouth.ToString().PadLeft(2, '0'); 
+                mouth++;
             }
         }
         private void bt_Click(object sender, EventArgs e)
@@ -58,7 +45,9 @@ namespace autoKimaiHelper
             Button wt = (Button)sender;
             textBox.Text = wt.Text;
             this.Close();
+            
             //pctID.Text = wt.Tag.ToString();
+
         }
        
     }

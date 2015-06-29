@@ -38,8 +38,6 @@ namespace autoKimaiHelper
             this.akc = AutoKimaiCore.getInstance(f);
         }
      
-        
-
         private void pctList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (pctList.SelectedIndex == -1)
@@ -125,8 +123,11 @@ namespace autoKimaiHelper
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            inTb.Text = pctIDString.Text + "," + evtIDString.Text;
-            inTb.Tag = pctID.Text + "," + evtID.Text;
+            if (pctIDString.Text != "" && evtIDString.Text != "")
+            {
+                inTb.Text = pctIDString.Text + "," + evtIDString.Text;
+                inTb.Tag = pctID.Text + "," + evtID.Text;
+            }
             this.Close();
         }
     }

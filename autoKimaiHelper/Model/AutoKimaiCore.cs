@@ -54,8 +54,7 @@ namespace autoKimaiHelper
             if (res.IndexOf("logout") != -1)
             {
                 Debug.WriteLine(res);
-                ui.Invoke(notify);
-                //LogOutNotify();           
+                ui.Invoke(notify);                 
             }
         }
         private void RemoveCookies()
@@ -293,14 +292,12 @@ namespace autoKimaiHelper
             string param = " axAction=reload_zef&axValue=|||&id=0&first_day=" + firstDayInt.ToString() + "&last_day=" + lastDayInt.ToString();
             return PostDoWork.PostDataToKimai(url, param, CookieData.SetTimeSheetList(cookies, kimaiKey, kimaiUsr));
         }
-        public string deleteDay(int id) 
+
+        public string DeleteDay(int id) 
         {
             string url = "http://designcenter.acer.com.tw/kimai/extensions/ki_timesheets/processor.php";                 
             string param = " axAction=quickdelete&axValue=&id=" + id;
             return PostDoWork.PostDataToKimai(url, param, CookieData.SetDeleteDay(cookies, kimaiKey, kimaiUsr));
         } 
-
-
-
     }
 }

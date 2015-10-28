@@ -1,4 +1,6 @@
-﻿using System;
+﻿//網路上抓來的程式碼
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -27,26 +29,25 @@ namespace autoKimaiHelper
                     IPInterfaceProperties ip = adapter.GetIPProperties();  
                     if (ip.UnicastAddresses.Count > 0)
                     {
-                        ipText = ip.UnicastAddresses[0].Address.ToString();//IP地址
-                        subMarkText = ip.UnicastAddresses[0].IPv4Mask.ToString();//子网掩码
+                        ipText = ip.UnicastAddresses[0].Address.ToString();//IP address
+                        subMarkText = ip.UnicastAddresses[0].IPv4Mask.ToString();//mask
 
                     }
                     if (ip.GatewayAddresses.Count > 0)
                     {
-                        gateWayText = ip.GatewayAddresses[0].Address.ToString();//默认网关
+                        gateWayText = ip.GatewayAddresses[0].Address.ToString();//getway
                     }
                     
                     dnsSuffixText = ip.DnsSuffix.ToString();
                     if (dnsSuffixText.IndexOf("acer") != -1)
                         break;
-                    int DnsCount = ip.DnsAddresses.Count;
-                    //Console.WriteLine("DNS服务器地址：");
+                    int DnsCount = ip.DnsAddresses.Count;                  
                     if (DnsCount > 0)
                     {
                         try
                         {
-                            dns1Text = ip.DnsAddresses[0].ToString(); //主DNS
-                            dns2Text = ip.DnsAddresses[1].ToString(); //备用DNS地址
+                            dns1Text = ip.DnsAddresses[0].ToString(); //主要DNS
+                            dns2Text = ip.DnsAddresses[1].ToString(); //副DNS
                         }
                         catch (Exception er)
                         {
@@ -56,7 +57,6 @@ namespace autoKimaiHelper
                 }
             }
         }
-
         public string dnsName 
         {
             get 

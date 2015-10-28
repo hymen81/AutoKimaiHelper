@@ -75,6 +75,7 @@
     <Compile Include="Model\AutoKimaiCore.cs" />
     <Compile Include="Model\CookieData.cs" />
     <Compile Include="Model\PostDoWork.cs" />
+    <Compile Include="MyParser.cs" />
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -27,6 +27,7 @@ namespace autoKimaiHelper
 
         private readonly MaterialSkinManager materialSkinManager;
         AutoKimaiCore akc;
+        MyParser mp;
         int zefId = 0;
         const int NOTFOUND = -1;
         //public string GOBELTIME = "";
@@ -54,11 +55,15 @@ namespace autoKimaiHelper
             yearsWeek.Text = (DateTime.Now.ToString("yyyy"));
             mouthWeek.Text = (DateTime.Now.ToString("MM"));
             akc = AutoKimaiCore.getInstance(this);
+            mp = MyParser.GetInstance();
+            mp.SetUI(this);
             materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
 
+
+            //星期元素
             weekDayTimes.Add(w1t1);
             weekDayTimes.Add(w2t1);
             weekDayTimes.Add(w3t1);
@@ -135,6 +140,7 @@ namespace autoKimaiHelper
            
 
             //checkBox1.Enabled = false;
+           
                       
         }
 
@@ -143,24 +149,11 @@ namespace autoKimaiHelper
             e.Handled = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true)
-                manyDays.Enabled = true;
-            else
-                manyDays.Enabled = false;
-        }
+        public delegate void YearsText(string s);
+        public YearsText yt;
+        public delegate void MouthText(string s);
+        public delegate void OutPutLineText(string s);
+       
 
         private void reset_Click(object sender, EventArgs e)
         {
@@ -286,28 +279,6 @@ namespace autoKimaiHelper
             {
                 materialTabControl1.SelectedIndex = value;
             }
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            
-
-        }
-    
-        private void evtList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
         }
 
         public void LogOutNotify()
@@ -470,8 +441,7 @@ namespace autoKimaiHelper
                     if (name.Equals("3G, LTE"))
                         changeFlag = true;
                     if (!changeFlag)
-                    {
-                        //pctList.Items.Add(name + "=" + value);
+                    {                       
                         ProjectData pd = new ProjectData(value, name);
                         projectData.Add(pd);
                         pctSearchedList.Add(pd);
@@ -593,7 +563,7 @@ namespace autoKimaiHelper
             //int firstIndex = listView1.SelectedItems[0].Index;
             for (int i = 0; i < selectItemsCount; i++)
             {
-                string result = akc.deleteDay(int.Parse(listView1.SelectedItems[0].Text));
+                string result = akc.DeleteDay(int.Parse(listView1.SelectedItems[0].Text));
                 listView1.Items.Remove(listView1.SelectedItems[0]);
                 outPutLine.Items.Add(result);
             }
@@ -604,6 +574,8 @@ namespace autoKimaiHelper
             listView1.Items.Clear();
             outPutLine.Items.Clear();
             string result = akc.GetTimeSheetList();
+            System.Windows.Forms.Clipboard.SetData(System.Windows.Forms.DataFormats.Text, result);
+
             outPutLine.Items.Add(result);
             int index = 0;
             int indexEnd = 0;
@@ -647,20 +619,33 @@ namespace autoKimaiHelper
                     int zefPctIndex = zef.IndexOf("buzzer_preselect(") + 17;
                     int zefPctEndIndex = zef.IndexOf(");", zefPctIndex);
                     string zefPct = zef.Substring(zefPctIndex, zefPctEndIndex - zefPctIndex);
+                    string[] zefPctSplit = zefPct.Split(',');
+
+                    int zefEvtIndex = zef.IndexOf("buzzer_preselect(", zefPctEndIndex) + 17;
+                    int zefEvtEndIndex = zef.IndexOf(");", zefEvtIndex);
+                    string zefEvt = zef.Substring(zefEvtIndex, zefEvtEndIndex - zefEvtIndex);
+                    string[] zefEvtSplit = zefEvt.Split(',');
+
+                    //zefPct = zefPctSplit[0];
+                    //string zefPctString = 
                     //zefPct=zefPct.Replace(" ", "");
-
-                    System.Windows.Forms.Clipboard.SetData(System.Windows.Forms.DataFormats.Text, zef.ToString());
-                    outPutLine.Items.Add(zefId + " " + zefDate + " " + zefTime + " " + zefPct);
-                    ListViewItem item = new ListViewItem();
-                    item.Text = zefId;
-                    item.SubItems.Add(zefDate);
-                    item.SubItems.Add(zefTime);
-                    item.SubItems.Add(zefPct);
-                    item.SubItems.Add("sdasd");
-                    listView1.Items.Add(item);
-
-                    //index = indexEnd;
-
+                    try
+                    {
+                        string pct = zefPctSplit[2];
+                        string evt = zefEvtSplit[2];
+                        outPutLine.Items.Add(zefId + " " + zefDate + " " + zefTime + " " + pct+" " +evt);
+                        ListViewItem item = new ListViewItem();
+                        item.Text = zefId;
+                        item.SubItems.Add(zefDate);
+                        item.SubItems.Add(zefTime);
+                        item.SubItems.Add(pct);
+                        item.SubItems.Add(evt);
+                        listView1.Items.Add(item);
+                    }
+                    catch 
+                    {
+                    
+                    }    
                 }
             } while (index != NOTFOUND);
         }

@@ -24,7 +24,6 @@ namespace autoKimaiHelper
         //List<WeekDayData> w1 = new List<WeekDayData>();
         //List<WeekDayData> w1 = new List<WeekDayData>();
     }
-
     public class WeekDayData
     {
         string time;

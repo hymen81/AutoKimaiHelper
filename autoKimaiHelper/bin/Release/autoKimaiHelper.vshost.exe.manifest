@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="autoKimaiHelper.exe" size="588704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="autoKimaiHelper.exe" size="589728">
       <assemblyIdentity name="autoKimaiHelper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qVeB1b9RhEkricp6RMHgqFPhmxeoqPnIrRBdINrTag8=</dsig:DigestValue>
+        <dsig:DigestValue>vBMtmqmbl/xb7WAyZx3r8Ay/XMsHH84L9DHmhULHjos=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>psVuTKbPElofy6UuB2wfEOUCcRyJRmdEWkTNaBTxajM=</dsig:DigestValue>
+        <dsig:DigestValue>EzeBqpzZ8XMvydoFMWgTn63FFHccdoYoQj9Ythl4RAE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

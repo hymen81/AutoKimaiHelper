@@ -119,7 +119,6 @@
             this.w1 = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.postDataButton = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.getProjectList = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.timeSheetMaterialRaisedButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.deleteMaterialRaisedButton = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -129,9 +128,12 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.getProjectList = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -154,7 +156,7 @@
             this.outPutLine.ItemHeight = 24;
             this.outPutLine.Location = new System.Drawing.Point(868, 98);
             this.outPutLine.Name = "outPutLine";
-            this.outPutLine.Size = new System.Drawing.Size(95, 148);
+            this.outPutLine.Size = new System.Drawing.Size(130, 148);
             this.outPutLine.TabIndex = 1;
             this.outPutLine.SelectedIndexChanged += new System.EventHandler(this.outPutLine_SelectedIndexChanged);
             // 
@@ -641,6 +643,8 @@
             // weekTab
             // 
             this.weekTab.BackColor = System.Drawing.Color.White;
+            this.weekTab.Controls.Add(this.materialLabel5);
+            this.weekTab.Controls.Add(this.materialLabel4);
             this.weekTab.Controls.Add(this.pictureBox3);
             this.weekTab.Controls.Add(this.w5t4project);
             this.weekTab.Controls.Add(this.w4t4project);
@@ -704,7 +708,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::autoKimaiHelper.Properties.Resources.minus;
-            this.pictureBox3.Location = new System.Drawing.Point(322, 110);
+            this.pictureBox3.Location = new System.Drawing.Point(371, 110);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -716,7 +720,7 @@
             // 
             this.w5t4project.Depth = 0;
             this.w5t4project.Hint = "";
-            this.w5t4project.Location = new System.Drawing.Point(601, 308);
+            this.w5t4project.Location = new System.Drawing.Point(650, 308);
             this.w5t4project.MaxLength = 32767;
             this.w5t4project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w5t4project.Name = "w5t4project";
@@ -736,7 +740,7 @@
             // 
             this.w4t4project.Depth = 0;
             this.w4t4project.Hint = "";
-            this.w4t4project.Location = new System.Drawing.Point(472, 308);
+            this.w4t4project.Location = new System.Drawing.Point(521, 308);
             this.w4t4project.MaxLength = 32767;
             this.w4t4project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w4t4project.Name = "w4t4project";
@@ -756,7 +760,7 @@
             // 
             this.w3t4project.Depth = 0;
             this.w3t4project.Hint = "";
-            this.w3t4project.Location = new System.Drawing.Point(360, 308);
+            this.w3t4project.Location = new System.Drawing.Point(409, 308);
             this.w3t4project.MaxLength = 32767;
             this.w3t4project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w3t4project.Name = "w3t4project";
@@ -776,7 +780,7 @@
             // 
             this.w2t4project.Depth = 0;
             this.w2t4project.Hint = "";
-            this.w2t4project.Location = new System.Drawing.Point(222, 308);
+            this.w2t4project.Location = new System.Drawing.Point(271, 308);
             this.w2t4project.MaxLength = 32767;
             this.w2t4project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w2t4project.Name = "w2t4project";
@@ -796,7 +800,7 @@
             // 
             this.w1t4project.Depth = 0;
             this.w1t4project.Hint = "";
-            this.w1t4project.Location = new System.Drawing.Point(89, 308);
+            this.w1t4project.Location = new System.Drawing.Point(138, 308);
             this.w1t4project.MaxLength = 32767;
             this.w1t4project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w1t4project.Name = "w1t4project";
@@ -816,7 +820,7 @@
             // 
             this.w5t4.Depth = 0;
             this.w5t4.Hint = "";
-            this.w5t4.Location = new System.Drawing.Point(601, 266);
+            this.w5t4.Location = new System.Drawing.Point(650, 266);
             this.w5t4.MaxLength = 32767;
             this.w5t4.MouseState = MaterialSkin.MouseState.HOVER;
             this.w5t4.Name = "w5t4";
@@ -835,7 +839,7 @@
             // 
             this.w4t4.Depth = 0;
             this.w4t4.Hint = "";
-            this.w4t4.Location = new System.Drawing.Point(472, 266);
+            this.w4t4.Location = new System.Drawing.Point(521, 266);
             this.w4t4.MaxLength = 32767;
             this.w4t4.MouseState = MaterialSkin.MouseState.HOVER;
             this.w4t4.Name = "w4t4";
@@ -854,7 +858,7 @@
             // 
             this.w3t4.Depth = 0;
             this.w3t4.Hint = "";
-            this.w3t4.Location = new System.Drawing.Point(361, 266);
+            this.w3t4.Location = new System.Drawing.Point(410, 266);
             this.w3t4.MaxLength = 32767;
             this.w3t4.MouseState = MaterialSkin.MouseState.HOVER;
             this.w3t4.Name = "w3t4";
@@ -873,7 +877,7 @@
             // 
             this.w2t4.Depth = 0;
             this.w2t4.Hint = "";
-            this.w2t4.Location = new System.Drawing.Point(222, 266);
+            this.w2t4.Location = new System.Drawing.Point(271, 266);
             this.w2t4.MaxLength = 32767;
             this.w2t4.MouseState = MaterialSkin.MouseState.HOVER;
             this.w2t4.Name = "w2t4";
@@ -892,7 +896,7 @@
             // 
             this.w1t4.Depth = 0;
             this.w1t4.Hint = "";
-            this.w1t4.Location = new System.Drawing.Point(89, 267);
+            this.w1t4.Location = new System.Drawing.Point(138, 267);
             this.w1t4.MaxLength = 32767;
             this.w1t4.MouseState = MaterialSkin.MouseState.HOVER;
             this.w1t4.Name = "w1t4";
@@ -912,7 +916,7 @@
             // 
             this.w5t3project.Depth = 0;
             this.w5t3project.Hint = "";
-            this.w5t3project.Location = new System.Drawing.Point(600, 237);
+            this.w5t3project.Location = new System.Drawing.Point(649, 237);
             this.w5t3project.MaxLength = 32767;
             this.w5t3project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w5t3project.Name = "w5t3project";
@@ -932,7 +936,7 @@
             // 
             this.w4t3project.Depth = 0;
             this.w4t3project.Hint = "";
-            this.w4t3project.Location = new System.Drawing.Point(471, 237);
+            this.w4t3project.Location = new System.Drawing.Point(520, 237);
             this.w4t3project.MaxLength = 32767;
             this.w4t3project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w4t3project.Name = "w4t3project";
@@ -952,7 +956,7 @@
             // 
             this.w3t3project.Depth = 0;
             this.w3t3project.Hint = "";
-            this.w3t3project.Location = new System.Drawing.Point(359, 237);
+            this.w3t3project.Location = new System.Drawing.Point(408, 237);
             this.w3t3project.MaxLength = 32767;
             this.w3t3project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w3t3project.Name = "w3t3project";
@@ -972,7 +976,7 @@
             // 
             this.w2t3project.Depth = 0;
             this.w2t3project.Hint = "";
-            this.w2t3project.Location = new System.Drawing.Point(221, 237);
+            this.w2t3project.Location = new System.Drawing.Point(270, 237);
             this.w2t3project.MaxLength = 32767;
             this.w2t3project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w2t3project.Name = "w2t3project";
@@ -992,7 +996,7 @@
             // 
             this.w1t3project.Depth = 0;
             this.w1t3project.Hint = "";
-            this.w1t3project.Location = new System.Drawing.Point(88, 237);
+            this.w1t3project.Location = new System.Drawing.Point(137, 237);
             this.w1t3project.MaxLength = 32767;
             this.w1t3project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w1t3project.Name = "w1t3project";
@@ -1012,7 +1016,7 @@
             // 
             this.w5t3.Depth = 0;
             this.w5t3.Hint = "";
-            this.w5t3.Location = new System.Drawing.Point(600, 195);
+            this.w5t3.Location = new System.Drawing.Point(649, 195);
             this.w5t3.MaxLength = 32767;
             this.w5t3.MouseState = MaterialSkin.MouseState.HOVER;
             this.w5t3.Name = "w5t3";
@@ -1031,7 +1035,7 @@
             // 
             this.w4t3.Depth = 0;
             this.w4t3.Hint = "";
-            this.w4t3.Location = new System.Drawing.Point(471, 195);
+            this.w4t3.Location = new System.Drawing.Point(520, 195);
             this.w4t3.MaxLength = 32767;
             this.w4t3.MouseState = MaterialSkin.MouseState.HOVER;
             this.w4t3.Name = "w4t3";
@@ -1050,7 +1054,7 @@
             // 
             this.w3t3.Depth = 0;
             this.w3t3.Hint = "";
-            this.w3t3.Location = new System.Drawing.Point(360, 195);
+            this.w3t3.Location = new System.Drawing.Point(409, 195);
             this.w3t3.MaxLength = 32767;
             this.w3t3.MouseState = MaterialSkin.MouseState.HOVER;
             this.w3t3.Name = "w3t3";
@@ -1069,7 +1073,7 @@
             // 
             this.w2t3.Depth = 0;
             this.w2t3.Hint = "";
-            this.w2t3.Location = new System.Drawing.Point(221, 195);
+            this.w2t3.Location = new System.Drawing.Point(270, 195);
             this.w2t3.MaxLength = 32767;
             this.w2t3.MouseState = MaterialSkin.MouseState.HOVER;
             this.w2t3.Name = "w2t3";
@@ -1088,7 +1092,7 @@
             // 
             this.w1t3.Depth = 0;
             this.w1t3.Hint = "";
-            this.w1t3.Location = new System.Drawing.Point(88, 196);
+            this.w1t3.Location = new System.Drawing.Point(137, 196);
             this.w1t3.MaxLength = 32767;
             this.w1t3.MouseState = MaterialSkin.MouseState.HOVER;
             this.w1t3.Name = "w1t3";
@@ -1144,7 +1148,7 @@
             // 
             this.w5t2project.Depth = 0;
             this.w5t2project.Hint = "";
-            this.w5t2project.Location = new System.Drawing.Point(600, 163);
+            this.w5t2project.Location = new System.Drawing.Point(649, 163);
             this.w5t2project.MaxLength = 32767;
             this.w5t2project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w5t2project.Name = "w5t2project";
@@ -1164,7 +1168,7 @@
             // 
             this.w4t2project.Depth = 0;
             this.w4t2project.Hint = "";
-            this.w4t2project.Location = new System.Drawing.Point(471, 163);
+            this.w4t2project.Location = new System.Drawing.Point(520, 163);
             this.w4t2project.MaxLength = 32767;
             this.w4t2project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w4t2project.Name = "w4t2project";
@@ -1184,7 +1188,7 @@
             // 
             this.w3t2project.Depth = 0;
             this.w3t2project.Hint = "";
-            this.w3t2project.Location = new System.Drawing.Point(359, 163);
+            this.w3t2project.Location = new System.Drawing.Point(408, 163);
             this.w3t2project.MaxLength = 32767;
             this.w3t2project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w3t2project.Name = "w3t2project";
@@ -1204,7 +1208,7 @@
             // 
             this.w2t2project.Depth = 0;
             this.w2t2project.Hint = "";
-            this.w2t2project.Location = new System.Drawing.Point(221, 163);
+            this.w2t2project.Location = new System.Drawing.Point(270, 163);
             this.w2t2project.MaxLength = 32767;
             this.w2t2project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w2t2project.Name = "w2t2project";
@@ -1224,7 +1228,7 @@
             // 
             this.w1t2project.Depth = 0;
             this.w1t2project.Hint = "";
-            this.w1t2project.Location = new System.Drawing.Point(88, 163);
+            this.w1t2project.Location = new System.Drawing.Point(137, 163);
             this.w1t2project.MaxLength = 32767;
             this.w1t2project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w1t2project.Name = "w1t2project";
@@ -1244,7 +1248,7 @@
             // 
             this.w5t2.Depth = 0;
             this.w5t2.Hint = "";
-            this.w5t2.Location = new System.Drawing.Point(600, 121);
+            this.w5t2.Location = new System.Drawing.Point(649, 121);
             this.w5t2.MaxLength = 32767;
             this.w5t2.MouseState = MaterialSkin.MouseState.HOVER;
             this.w5t2.Name = "w5t2";
@@ -1263,7 +1267,7 @@
             // 
             this.w4t2.Depth = 0;
             this.w4t2.Hint = "";
-            this.w4t2.Location = new System.Drawing.Point(471, 121);
+            this.w4t2.Location = new System.Drawing.Point(520, 121);
             this.w4t2.MaxLength = 32767;
             this.w4t2.MouseState = MaterialSkin.MouseState.HOVER;
             this.w4t2.Name = "w4t2";
@@ -1282,7 +1286,7 @@
             // 
             this.w3t2.Depth = 0;
             this.w3t2.Hint = "";
-            this.w3t2.Location = new System.Drawing.Point(360, 121);
+            this.w3t2.Location = new System.Drawing.Point(409, 121);
             this.w3t2.MaxLength = 32767;
             this.w3t2.MouseState = MaterialSkin.MouseState.HOVER;
             this.w3t2.Name = "w3t2";
@@ -1301,7 +1305,7 @@
             // 
             this.w2t2.Depth = 0;
             this.w2t2.Hint = "";
-            this.w2t2.Location = new System.Drawing.Point(221, 121);
+            this.w2t2.Location = new System.Drawing.Point(270, 121);
             this.w2t2.MaxLength = 32767;
             this.w2t2.MouseState = MaterialSkin.MouseState.HOVER;
             this.w2t2.Name = "w2t2";
@@ -1320,7 +1324,7 @@
             // 
             this.w1t2.Depth = 0;
             this.w1t2.Hint = "";
-            this.w1t2.Location = new System.Drawing.Point(88, 122);
+            this.w1t2.Location = new System.Drawing.Point(137, 122);
             this.w1t2.MaxLength = 32767;
             this.w1t2.MouseState = MaterialSkin.MouseState.HOVER;
             this.w1t2.Name = "w1t2";
@@ -1340,7 +1344,7 @@
             // 
             this.w5t1project.Depth = 0;
             this.w5t1project.Hint = "";
-            this.w5t1project.Location = new System.Drawing.Point(601, 81);
+            this.w5t1project.Location = new System.Drawing.Point(650, 81);
             this.w5t1project.MaxLength = 32767;
             this.w5t1project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w5t1project.Name = "w5t1project";
@@ -1359,7 +1363,7 @@
             // 
             this.w4t1project.Depth = 0;
             this.w4t1project.Hint = "";
-            this.w4t1project.Location = new System.Drawing.Point(472, 81);
+            this.w4t1project.Location = new System.Drawing.Point(521, 81);
             this.w4t1project.MaxLength = 32767;
             this.w4t1project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w4t1project.Name = "w4t1project";
@@ -1378,7 +1382,7 @@
             // 
             this.w3t1project.Depth = 0;
             this.w3t1project.Hint = "";
-            this.w3t1project.Location = new System.Drawing.Point(360, 81);
+            this.w3t1project.Location = new System.Drawing.Point(409, 81);
             this.w3t1project.MaxLength = 32767;
             this.w3t1project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w3t1project.Name = "w3t1project";
@@ -1397,7 +1401,7 @@
             // 
             this.w2t1project.Depth = 0;
             this.w2t1project.Hint = "";
-            this.w2t1project.Location = new System.Drawing.Point(222, 81);
+            this.w2t1project.Location = new System.Drawing.Point(271, 81);
             this.w2t1project.MaxLength = 32767;
             this.w2t1project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w2t1project.Name = "w2t1project";
@@ -1416,7 +1420,7 @@
             // 
             this.w1t1project.Depth = 0;
             this.w1t1project.Hint = "";
-            this.w1t1project.Location = new System.Drawing.Point(89, 81);
+            this.w1t1project.Location = new System.Drawing.Point(138, 81);
             this.w1t1project.MaxLength = 32767;
             this.w1t1project.MouseState = MaterialSkin.MouseState.HOVER;
             this.w1t1project.Name = "w1t1project";
@@ -1435,7 +1439,7 @@
             // 
             this.w5t1.Depth = 0;
             this.w5t1.Hint = "";
-            this.w5t1.Location = new System.Drawing.Point(601, 39);
+            this.w5t1.Location = new System.Drawing.Point(650, 39);
             this.w5t1.MaxLength = 32767;
             this.w5t1.MouseState = MaterialSkin.MouseState.HOVER;
             this.w5t1.Name = "w5t1";
@@ -1453,7 +1457,7 @@
             // 
             this.w4t1.Depth = 0;
             this.w4t1.Hint = "";
-            this.w4t1.Location = new System.Drawing.Point(472, 39);
+            this.w4t1.Location = new System.Drawing.Point(521, 39);
             this.w4t1.MaxLength = 32767;
             this.w4t1.MouseState = MaterialSkin.MouseState.HOVER;
             this.w4t1.Name = "w4t1";
@@ -1471,7 +1475,7 @@
             // 
             this.w3t1.Depth = 0;
             this.w3t1.Hint = "";
-            this.w3t1.Location = new System.Drawing.Point(361, 39);
+            this.w3t1.Location = new System.Drawing.Point(410, 39);
             this.w3t1.MaxLength = 32767;
             this.w3t1.MouseState = MaterialSkin.MouseState.HOVER;
             this.w3t1.Name = "w3t1";
@@ -1489,7 +1493,7 @@
             // 
             this.w2t1.Depth = 0;
             this.w2t1.Hint = "";
-            this.w2t1.Location = new System.Drawing.Point(222, 39);
+            this.w2t1.Location = new System.Drawing.Point(271, 39);
             this.w2t1.MaxLength = 32767;
             this.w2t1.MouseState = MaterialSkin.MouseState.HOVER;
             this.w2t1.Name = "w2t1";
@@ -1507,7 +1511,7 @@
             // 
             this.w1t1.Depth = 0;
             this.w1t1.Hint = "";
-            this.w1t1.Location = new System.Drawing.Point(89, 40);
+            this.w1t1.Location = new System.Drawing.Point(138, 40);
             this.w1t1.MaxLength = 32767;
             this.w1t1.MouseState = MaterialSkin.MouseState.HOVER;
             this.w1t1.Name = "w1t1";
@@ -1598,7 +1602,7 @@
             this.w5.Depth = 0;
             this.w5.Font = new System.Drawing.Font("Roboto", 11F);
             this.w5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.w5.Location = new System.Drawing.Point(621, 18);
+            this.w5.Location = new System.Drawing.Point(670, 18);
             this.w5.MouseState = MaterialSkin.MouseState.HOVER;
             this.w5.Name = "w5";
             this.w5.Size = new System.Drawing.Size(41, 19);
@@ -1611,7 +1615,7 @@
             this.w4.Depth = 0;
             this.w4.Font = new System.Drawing.Font("Roboto", 11F);
             this.w4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.w4.Location = new System.Drawing.Point(487, 17);
+            this.w4.Location = new System.Drawing.Point(536, 17);
             this.w4.MouseState = MaterialSkin.MouseState.HOVER;
             this.w4.Name = "w4";
             this.w4.Size = new System.Drawing.Size(41, 19);
@@ -1624,7 +1628,7 @@
             this.w3.Depth = 0;
             this.w3.Font = new System.Drawing.Font("Roboto", 11F);
             this.w3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.w3.Location = new System.Drawing.Point(372, 17);
+            this.w3.Location = new System.Drawing.Point(421, 17);
             this.w3.MouseState = MaterialSkin.MouseState.HOVER;
             this.w3.Name = "w3";
             this.w3.Size = new System.Drawing.Size(41, 19);
@@ -1637,7 +1641,7 @@
             this.w2.Depth = 0;
             this.w2.Font = new System.Drawing.Font("Roboto", 11F);
             this.w2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.w2.Location = new System.Drawing.Point(228, 17);
+            this.w2.Location = new System.Drawing.Point(277, 17);
             this.w2.MouseState = MaterialSkin.MouseState.HOVER;
             this.w2.Name = "w2";
             this.w2.Size = new System.Drawing.Size(41, 19);
@@ -1650,7 +1654,7 @@
             this.w1.Depth = 0;
             this.w1.Font = new System.Drawing.Font("Roboto", 11F);
             this.w1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.w1.Location = new System.Drawing.Point(98, 18);
+            this.w1.Location = new System.Drawing.Point(147, 18);
             this.w1.MouseState = MaterialSkin.MouseState.HOVER;
             this.w1.Name = "w1";
             this.w1.Size = new System.Drawing.Size(41, 19);
@@ -1660,7 +1664,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::autoKimaiHelper.Properties.Resources.plus;
-            this.pictureBox2.Location = new System.Drawing.Point(352, 110);
+            this.pictureBox2.Location = new System.Drawing.Point(401, 110);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1671,28 +1675,15 @@
             // postDataButton
             // 
             this.postDataButton.Depth = 0;
-            this.postDataButton.Location = new System.Drawing.Point(779, 140);
+            this.postDataButton.Location = new System.Drawing.Point(775, 167);
             this.postDataButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.postDataButton.Name = "postDataButton";
             this.postDataButton.Primary = true;
-            this.postDataButton.Size = new System.Drawing.Size(72, 165);
+            this.postDataButton.Size = new System.Drawing.Size(72, 70);
             this.postDataButton.TabIndex = 56;
             this.postDataButton.Text = "start";
             this.postDataButton.UseVisualStyleBackColor = true;
             this.postDataButton.Click += new System.EventHandler(this.postDataButton_Click_1);
-            // 
-            // getProjectList
-            // 
-            this.getProjectList.Depth = 0;
-            this.getProjectList.Location = new System.Drawing.Point(868, 152);
-            this.getProjectList.MouseState = MaterialSkin.MouseState.HOVER;
-            this.getProjectList.Name = "getProjectList";
-            this.getProjectList.Primary = true;
-            this.getProjectList.Size = new System.Drawing.Size(69, 78);
-            this.getProjectList.TabIndex = 47;
-            this.getProjectList.Text = "2.Get Project and Task List";
-            this.getProjectList.UseVisualStyleBackColor = true;
-            this.getProjectList.Click += new System.EventHandler(this.getProjectList_Click_1);
             // 
             // tabPage4
             // 
@@ -1741,10 +1732,11 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.listView1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.listView1.LabelEdit = true;
             this.listView1.Location = new System.Drawing.Point(7, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(671, 309);
+            this.listView1.Size = new System.Drawing.Size(671, 398);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -1773,6 +1765,19 @@
             // 
             this.columnHeader5.Text = "Task";
             this.columnHeader5.Width = 158;
+            // 
+            // getProjectList
+            // 
+            this.getProjectList.Depth = 0;
+            this.getProjectList.Location = new System.Drawing.Point(868, 152);
+            this.getProjectList.MouseState = MaterialSkin.MouseState.HOVER;
+            this.getProjectList.Name = "getProjectList";
+            this.getProjectList.Primary = true;
+            this.getProjectList.Size = new System.Drawing.Size(69, 78);
+            this.getProjectList.TabIndex = 47;
+            this.getProjectList.Text = "2.Get Project and Task List";
+            this.getProjectList.UseVisualStyleBackColor = true;
+            this.getProjectList.Click += new System.EventHandler(this.getProjectList_Click_1);
             // 
             // label8
             // 
@@ -1805,12 +1810,38 @@
             this.materialLabel2.TabIndex = 41;
             this.materialLabel2.Text = "user";
             // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(91, 43);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(45, 19);
+            this.materialLabel4.TabIndex = 117;
+            this.materialLabel4.Text = "時數:";
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel5.Location = new System.Drawing.Point(91, 81);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(45, 19);
+            this.materialLabel5.TabIndex = 118;
+            this.materialLabel5.Text = "案子:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(973, 520);
+            this.ClientSize = new System.Drawing.Size(1010, 520);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.materialTabSelector1);
@@ -1953,6 +1984,8 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField w1t3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
     
 
       

@@ -71,9 +71,6 @@ namespace autoKimaiHelper
             Button wt = (Button)sender;
             textBox.Text = wt.Text;
             this.Close();
-            
-            //pctID.Text = wt.Tag.ToString();
-
         }
        
     }
